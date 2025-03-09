@@ -1,5 +1,5 @@
-FILENAME = "sample_input.txt"
-#FILENAME = "input.txt"
+# FILENAME = "sample_input.txt"
+FILENAME = "input.txt"
 
 import time
 import utils
@@ -30,19 +30,34 @@ def main():
 
 def parse_data():
     with open(FILENAME, "r") as f:
-        data = f.readlines()
-
-    # return utils.grid_parse(data)
+        data = f.read()
 
     return data
 
 
 def part1(data):
-    return None
+    floor = 0
+    for char in data.strip():
+        if char == "(":
+            floor += 1
+        elif char == ")":
+            floor -= 1
+
+    return floor
 
 
 def part2(data):
-    return None
+    floor = 0
+    position = 0
+    for char in data.strip():
+        position += 1
+        if char == "(":
+            floor += 1
+        elif char == ")":
+            floor -= 1
+
+        if floor < 0:
+            return position
 
 
 if __name__ == "__main__":
