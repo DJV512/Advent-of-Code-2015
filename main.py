@@ -21,10 +21,10 @@ def main():
     print()
     print(f"Part 2 Answer: {answer2}")
     print()
-    print(f"Data Parse Execution Time: {1000*(parse_time - start_time)} ms")
-    print(f"Part 1 Execution Time:     {1000*(part1_time - parse_time)} ms")
-    print(f"Part 2 Execution Time:     {1000*(part2_time - part1_time)} ms")
-    print(f"Total Execution Time:      {1000*(part2_time - start_time)} ms")
+    print(f"Data Parse Execution Time: {1000*(parse_time - start_time):.2f} ms")
+    print(f"Part 1 Execution Time:     {1000*(part1_time - parse_time):.2f} ms")
+    print(f"Part 2 Execution Time:     {1000*(part2_time - part1_time):.2f} ms")
+    print(f"Total Execution Time:      {1000*(part2_time - start_time):.2f} ms")
     print("---------------------------------------------------")
 
 
