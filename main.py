@@ -28,6 +28,13 @@ def main():
     print("---------------------------------------------------")
 
 
+output = True  # Toggle this flag to enable/disable prints
+def debug_print(*args, **kwargs):
+    if output:
+        print(*args, **kwargs)
+
+
+
 def parse_data():
     with open(FILENAME, "r") as f:
         data = f.readlines()
