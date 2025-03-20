@@ -17,6 +17,7 @@ from concurrent.futures import ProcessPoolExecutor
 #     print(f"===== Finished {script} =====\n")
 # print(f"Total time for all days is {(time.time()-start)*1000:.2f} ms.")
 
+
 def run_script(day):
     script = f"Day{day}/main.py"
     result = subprocess.run(
@@ -26,6 +27,7 @@ def run_script(day):
         cwd=f"Day{day}"
     )
     return f"\n===== Running {script} =====\n{result.stdout}{result.stderr}===== Finished {script} =====\n\n"
+
 
 if __name__ == "__main__":
     # Count all directories in the current folder

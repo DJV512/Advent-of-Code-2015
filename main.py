@@ -34,7 +34,6 @@ def debug_print(*args, **kwargs):
         print(*args, **kwargs)
 
 
-
 def parse_data():
     with open(FILENAME, "r") as f:
         data = f.readlines()
