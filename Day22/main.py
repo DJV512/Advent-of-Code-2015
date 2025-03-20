@@ -301,6 +301,7 @@ def part1(part2=False):
 
     return "Could not solve."        
 
+
 def part2(): 
     return part1(part2=True)
 
